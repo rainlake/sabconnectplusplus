@@ -188,6 +188,22 @@ this.manifest = {
 		{
 			'tab': 'Providers',
 			'group': '1-Click NZB downloading',
+			'name': 'provider_usenetcrawler',
+			'type': 'checkbox',
+			'sync': true,
+			'label': 'usenet-crawler.com'
+		},
+		{
+			'tab': 'Providers',
+			'group': '1-Click NZB downloading',
+			'name': 'apikey_usenetcrawler',
+			'type': 'text',
+			'sync': true,
+			'label': 'usenet-crawler.com API key'
+		},
+		{
+			'tab': 'Providers',
+			'group': '1-Click NZB downloading',
 			'name': 'provider_newznab',
 			'type': 'text',
 			'sync': true,

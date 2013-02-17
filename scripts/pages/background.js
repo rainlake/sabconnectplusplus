@@ -16,7 +16,9 @@ var defaultSettings = {
 	provider_nzbdotsu: true,
 	provider_nzbx: true,
 	provider_yubse: true,
+	provider_usenetcrawler: true,
 	provider_newznab: 'your_newznab.com, some_other_newznab.com',
+	apikey_usenetcrawler: '',
 	use_name_binsearch: true,
 	use_name_nzbindex: true,
 	use_name_yubse: true,
@@ -464,6 +466,9 @@ function OnRequest( request, sender, sendResponse )
 	switch( request.action ) {
 	case 'initialize':
 		InitializeContentScript( request, response );
+		break;
+	case 'initialize_apikey':
+		InitializeContentScript_APIKey( request, response );
 		break;
 	case 'set_setting':
 		SetSetting( request, response );

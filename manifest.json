@@ -66,7 +66,8 @@
 				"*://*.fanzub.com/*",
 				"*://*.dognzb.cr/*",
 				"*://*.yubse.com/*",
-				"*://*.nzbx.co/*"
+				"*://*.nzbx.co/*",
+				"*://*.usenet-crawler.com/*"
 			],
 			"js": [
 				"third_party/jquery/jquery-1.7.2.min.js",
@@ -132,6 +133,11 @@
 		{
 			"matches": [ "*://*.nzbx.co/*" ],
 			"js": [	"scripts/content/nzbx.js" ],
+			"all_frames": true
+		},
+		{
+			"matches": [ "*://*.usenet-crawler.com/*" ],
+			"js": [	"scripts/content/usenetcrawler.js" ],
 			"all_frames": true
 		}
 		
