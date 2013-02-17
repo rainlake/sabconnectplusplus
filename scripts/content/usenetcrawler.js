@@ -21,6 +21,14 @@ function handleAllDownloadLinks() {
 			link.click(addToSABnzbdFromUsenetCrawler);
 		}		
 	});
+	$("a[title='Download Nzb']").each(function() {
+		var tr = $(this).parents("tr[id^='guid']");
+		if(tr.length > 0){
+			var link = $('<a class="addSABnzbd" href="https://www.usenet-crawler.com/api?apikey=' + apikey_usenetcrawler + '&t=get&id=' + tr[0].id.substring(4) + '"><img title="Send to SABnzbd" src="' + img + '" /></a>');
+			$(this).parent().after(link);
+			link.click(addToSABnzbdFromUsenetCrawler);
+		}
+	});
 }
 
 function RefreshSettings()
